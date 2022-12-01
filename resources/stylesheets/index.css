@@ -1,0 +1,575 @@
+body{
+	background-color:var(--background-color);
+}
+
+.menu{
+	height:fit-content;
+	align-content:center;
+	padding:10px;
+}
+
+#options{
+	border:none;
+	border-radius:0.1em;
+	font-size:3rem;
+	background-color:var(--button-color);
+	color:var(--text-color);
+}
+
+#options:hover{
+	background-color:var(--text-color);
+	color:var(--background-color);
+}
+
+.navlink{
+	background-color:var(--button-color);
+	margin:0.6rem;
+	font-size:3rem;
+	text-decoration:none;
+	border-radius:0.1em;
+	padding:0.05em;	
+	color:var(--text-color);
+}
+
+.navlink:hover{
+	background-color:var(--text-color);
+	color:var(--background-color);
+}
+
+.content{
+	background-color:var(--secondary-color);
+	width:100%;
+	height:100%;
+	border-radius:0.3rem;
+	display:flex;
+}
+
+.spin{
+	font-size:20rem;
+	position:relative;
+	top:45%;
+	left:50%;
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	opacity:1;
+	animation:visible 2s;
+	}
+
+		    /* Modal Content/Box */
+.modal-content {
+	background-color: var(--background-color);
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+	@keyframes visible{
+		from{
+			opacity:0;
+		}
+		to{
+			opacity:1;
+		}
+	}
+	
+.modal-content > p{
+	text-align:center;
+	color:var(--text-color);
+	font-size:1.5rem;
+	font-family:arial;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	}
+
+.theme{
+		background-size:contain;
+		color:var(--text-color);
+		width:160px;
+		height:150px;
+		border:none;
+		border-radius:0.3rem;
+		cursor:pointer;
+		position:relative;
+		left:-70px;
+		margin:5px;
+}
+
+.theme:hover{
+	border:2px solid var(--text-color);
+}
+		
+		
+.theme1{
+	background:url('/Diplomna/resources/images/default.png');
+}
+
+.theme2{
+	background:url('/Diplomna/resources/images/coolgray.png');
+}
+
+.theme3{
+	background:url('/Diplomna/resources/images/warmgray.png');
+}
+
+.theme4{
+	background:url('/Diplomna/resources/images/bluegray.png');
+}
+
+.themeLabel{
+	display:block;
+	border:2px solid var(--text-color);
+	border-radius:0.3rem;
+}
+
+.thmLabel{
+	position:relative;
+	top:-75px;
+	left:10px;
+	color:var(--text-color);
+	z-index:1;
+	background-color:var(--background-color);
+	font-size:1.5rem;
+}
+
+.DBLabel{
+	display:block;
+	border:2px solid var(--text-color);
+	border-radius:0.3rem;
+	margin-top:25px;
+}
+
+.dbLabel{
+	position:relative;
+	top:-25px;
+	left:10px;
+	color:var(--text-color);
+	z-index:1;
+	background-color:var(--background-color);
+	font-size:1.5rem;
+}
+
+.dbbtn{
+		color:var(--text-color);
+		background-color:var(--button-color);
+		border:none;
+		border-radius:0.3rem;
+		position:relative;
+		height:30px;
+		margin-top:15px;
+		margin-bottom:15px;
+		left:-25px;
+		z-index:1;
+}
+
+.dbbtn:hover{
+		color:var(--button-color);
+		background-color:var(--text-color);
+}
+
+.Time{
+	display:block;
+	border:2px solid var(--text-color);
+	border-radius:0.3rem;
+	margin-top:25px;
+}
+
+.timer{
+	position:relative;
+	top:-30px;
+	left:10px;
+	color:var(--text-color);
+	z-index:1;
+	background-color:var(--background-color);
+	font-size:1.5rem;
+}
+
+#setTime{
+	color:var(--text-color);
+	background-color:var(--button-color);
+	border:none;
+	border-radius:0.3rem;
+	position:relative;
+	height:30px;
+	margin-top:15px;
+	margin-bottom:15px;
+	left:-65px;
+	z-index:1;
+}
+
+/* DEVICES STYLE*/
+.TempSensor{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.TempSensor > div{
+	display:flex;
+	padding:2px;
+}
+
+.TempSensor > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+
+.TempSensor > div > .value{
+	background-color:var(--background-color);
+	display:inliine;
+	width:100%;
+}
+
+.TempSensor > div > .value > span{
+	position:absolute;
+}
+
+.TempSensor > div > .value > .bar{
+	background-color:var(--secondary-color);
+	width:40%;
+	height:100%;
+}
+
+.TempSensor > div > span{
+	display:block;
+	text-align:left;
+	width:130px;
+}
+#temp{
+	width:25;
+}
+#humidity{
+	width:50%;
+}
+#pressure{
+	width:10%;
+}
+
+.PowerSensor{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.PowerSensor > div{
+	display:flex;
+	padding:2px;
+}
+
+.PowerSensor > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+
+.PowerSensor > div > .value{
+	background-color:var(--background-color);
+	display:inliine;
+	width:100%;
+}
+
+.PowerSensor > div > .value > span{
+	position:absolute;
+}
+
+.PowerSensor > div > .value > .bar{
+	background-color:var(--secondary-color);
+	width:40%;
+	height:100%;
+}
+
+.PowerSensor > div > span{
+	display:block;
+	text-align:left;
+	width:130px;
+}
+
+.SystemMonitor{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.SystemMonitor > div{
+	display:flex;
+	padding:2px;
+}
+
+.SystemMonitor > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+
+.SystemMonitor > div > .value{
+	background-color:var(--background-color);
+	display:inliine;
+	width:100%;
+}
+
+.SystemMonitor > div > .value > span{
+	position:absolute;
+}
+
+.SystemMonitor > div > .value > .bar{
+	background-color:var(--secondary-color);
+	width:40%;
+	height:100%;
+}
+
+.SystemMonitor > div > span{
+	display:block;
+	text-align:left;
+	width:130px;
+}
+
+.IrControl{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+.IrControl > div{
+	display:flex;
+	padding:2px;
+	justify-content:center;
+}
+.IrControl > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+
+.IrControl > div > span > button{
+	border:none;
+	border-radius:0.1em;
+	font-size:1.5rem;
+	background-color:var(--background-color);
+	color:var(--text-color);
+	margin:2px;
+}
+.IrControl > div > span > button:hover{
+	background-color:var(--text-color);
+	color:var(--background-color);
+}
+
+.RelayControl{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.RelayControl > span {
+	height:100%;
+	text-align:center;
+	font-size:auto;
+	width:100px;
+}
+
+.RelayControl > div > span > button{
+	border:none;
+	border-radius:0.1em;
+	font-size:1.5rem;
+	background-color:var(--background-color);
+	color:var(--text-color);
+	margin:2px;
+}
+
+.RelayControl > div > span > button:hover{
+	background-color:var(--text-color) !important;
+	color:var(--button-color) !important;
+}
+
+.RelayControl > div{
+	display:flex;
+	padding:2px;
+}
+
+.RelayControl > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+.DoorSensor{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.DoorSensor > span {
+	height:100%;
+	text-align:center;
+	font-size:auto;
+	width:100px;
+}
+
+.DoorSensor > div > span > button{
+	border:none;
+	border-radius:0.1em;
+	font-size:1.5rem;
+	background-color:var(--background-color);
+	color:var(--text-color);
+	margin:2px;
+}
+
+.DoorSensor > div > span > button:hover{
+	background-color:var(--text-color) !important;
+	color:var(--button-color) !important;
+}
+
+.DoorSensor > div{
+	display:flex;
+	padding:2px;
+}
+
+.DoorSensor > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+.DigitalInput{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.DigitalInput > span {
+	height:100%;
+	text-align:center;
+	font-size:auto;
+	width:100px;
+}
+
+.DigitalInput > div > span > button{
+	border:none;
+	border-radius:0.1em;
+	font-size:1.5rem;
+	background-color:var(--background-color);
+	color:var(--text-color);
+	margin:2px;
+}
+
+.DigitalInput > div > span > button:hover{
+	background-color:var(--text-color) !important;
+	color:var(--button-color) !important;
+}
+
+.DigitalInput > div{
+	display:flex;
+	padding:2px;
+}
+
+.DigitalInput > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+.AnalogInput{
+	background-color:var(--button-color);
+	color:var(--text-color);
+	display:inline-block;
+	position:relative;
+	width:fit-content;
+	height:fit-content;
+	margin:10px;
+	border-radius:0.3rem;
+}
+
+.AnalogInput > span {
+	height:100%;
+	text-align:center;
+	font-size:auto;
+	width:100px;
+}
+
+.AnalogInput > div > span > button{
+	border:none;
+	border-radius:0.1em;
+	font-size:1.5rem;
+	background-color:var(--background-color);
+	color:var(--text-color);
+	margin:2px;
+}
+
+.AnalogInput > div > span > button:hover{
+	background-color:var(--text-color) !important;
+	color:var(--button-color) !important;
+}
+
+.AnalogInput > div{
+	display:flex;
+	padding:2px;
+}
+
+.AnalogInput > .title{
+	display:block;
+	text-align:center;
+	font-size:1.5rem;
+	padding:5px;
+}
+		
